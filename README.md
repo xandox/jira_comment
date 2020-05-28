@@ -25,8 +25,8 @@ print(p)
 ```
 
 Will:
-# Create directory `./JIRA-184/comments/0` with images content. New names for images will be sha256 hesh sum. It needed if your report generate different images but with same name time to time. So you can upload this directory content to JIRA by one drop.
-# Print to stdout format comment which you can copy past to JIRA comment directly.
+1. Create directory `./JIRA-184/comments/0` with images content. New names for images will be sha256 hesh sum. It needed if your report generate different images but with same name time to time. So you can upload this directory content to JIRA by one drop.
+2. Print to stdout format comment which you can copy past to JIRA comment directly.
 
 Output example:
 ```
