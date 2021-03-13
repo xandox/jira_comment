@@ -34,9 +34,15 @@ class PathOption(Option):
         return Path(value)
 
 
+class FloatFormat(Option):
+    def check_type(self, value):
+        return str(value)
+
+
 class Settings:
     def __init__(self):
         self._image_directory = PathOption(Path("./images"))
+        self._float_format = FloatFormat(".4f")
 
     @property
     def image_directory(self):
@@ -51,11 +57,18 @@ class Settings:
     def reset_image_directory(self):
         self._image_directory.reset()
 
+    @property
+    def float_format(self):
+        return self._float_format.value
+
+    def push_float_format(self, new_value):
+        self._float_format.push(new_value)
+
+    def pop_float_format(self):
+        return self._float_format.pop()
+
+    def reset_float_format(self):
+        self._float_format.reset()
+
 
 settings = Settings()
-
-
-
-
-
-

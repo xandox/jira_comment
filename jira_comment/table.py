@@ -1,6 +1,7 @@
 from .base import JiraBase
 from .utils import render
 
+
 class Row(JiraBase):
     def __init__(self, *columns):
         self.columns = list(columns)
@@ -8,7 +9,7 @@ class Row(JiraBase):
     def render(self) -> str:
         inner = "|".join([render(c) for c in self.columns])
         return f"|{inner}|"
-        
+
 
 class HeadRow(Row):
     def render(self) -> str:
